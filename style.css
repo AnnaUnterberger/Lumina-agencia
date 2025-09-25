@@ -97,6 +97,40 @@
             }
         }
 
+    /* Carousel image cover and responsive height */
+    .carousel-inner {
+        width: 100%;
+        height: 40vw; /* altura responsiva, ajuste conforme necessário */
+        max-height: 500px;
+        min-height: 250px;
+    }
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.carousel-caption {
+  color: #000000;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+}    @media screen and (max-width: 768px) {
+        .carousel-inner {
+            height: 55vw;
+            min-height: 150px;
+            max-height: 300px;
+        }
+    }
+
         /* Header Styles */
         .header {
             position: fixed;
@@ -106,7 +140,6 @@
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
-            padding: 1rem 0;
             transition: all 0.3s ease;
         }
 
@@ -134,9 +167,12 @@
         }
 
         .logo-title-image {
-            height: 45px;
+            height: 80px;
             width: auto;
             object-fit: contain;
+            display: block;
+            margin: 0;
+            padding: 0;
         }
 
         @media screen and (max-width: 768px) {
@@ -538,35 +574,26 @@
         /* About Section */
         .about {
             background: var(--bg-gray);
+            padding: 5rem 0;
         }
 
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+        .about .container {
+            display: flex;
+            justify-content: center;
             align-items: center;
-        }
-
-        @media screen and (max-width: 768px) {
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                text-align: center;
-            }
-
-            .about-visual {
-                order: -1;
-            }
+            max-width: 800px;
         }
 
         .about-text {
-            max-width: 500px;
+            text-align: center;
+            width: 100%;
         }
 
         .about-text h2 {
             font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             color: var(--primary-black);
+            text-align: center;
         }
 
         .about-text p {
@@ -574,6 +601,21 @@
             color: var(--medium-gray);
             font-size: 1.1rem;
             line-height: 1.8;
+            text-align: center;
+        }
+
+        .about-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .about {
+                padding: 3rem 0;
+            }
+            
+            .about .container {
+                padding: 0 1.5rem;
+            }
         }
 
         .about-visual {
@@ -647,11 +689,19 @@
             font-size: 1.1rem;
             transition: all 0.3s ease;
             border: 2px dashed var(--light-gray);
+            overflow: hidden; /* Adicionado para corrigir o sumiço da imagem */
         }
 
         .portfolio-item:hover {
             background: var(--light-gray);
             color: var(--white);
+        }
+
+        /* Corrige sumiço da imagem no hover do portfolio */
+        .portfolio-item:hover img {
+            opacity: 1 !important;
+            filter: none !important;
+            transition: none;
         }
 
         .btn-secondary {
@@ -1359,6 +1409,24 @@
         .quick-action:hover {
             background: var(--primary-black);
             color: white;
+        }
+
+        /* Imagens responsivas e bem encaixadas */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        /* Para imagens que precisam preencher o container completamente */
+        .img-logo img,
+        .about-visual img,
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
         }
 
         /* Mobile Responsive */

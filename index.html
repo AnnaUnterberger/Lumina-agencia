@@ -7,6 +7,7 @@
     <meta name="description" content="Agência de marketing digital especializada em social media, tráfego pago, branding e design gráfico. Transformamos sua presença digital em resultados reais.">
     <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');</style>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
     <!-- Loading Screen -->
@@ -55,7 +56,7 @@
             <div class="services-grid">
                 <div class="service-card fade-in">
                     <div class="Img-nossos-serviços">
-                    <img src="caminho/da/imagem.jpg">
+                    <img src="image/Social-Media.png">
                     </div>
                     <h3>Social Media Management</h3>
                     <p>Gerenciamento completo das suas redes sociais com conteúdo estratégico, engajamento qualificado e crescimento orgânico sustentável.</p>
@@ -63,14 +64,16 @@
                 
                 <div class="service-card fade-in">
                     <div class="Img-nossos-serviços">
-                    <img src="caminho/da/imagem.jpg">
+                    <img src="image/Trafego-Pago.png">
                     </div>
                     <h3>Tráfego Pago</h3>
                     <p>Campanhas de anúncios otimizadas no Facebook, Instagram e Google Ads para maximizar seu ROI e alcançar seu público-alvo ideal.</p>
                 </div>
                 
                 <div class="service-card fade-in">
-                    <div class="service-icon">✨</div>
+                    <div class="Img-nossos-serviços">
+                    <img src="image/Branding.png">
+                    </div>
                     <h3>Branding</h3>
                     <p>Desenvolvimento de identidade visual marcante e estratégia de marca que conecta emocionalmente com seu público e diferencia seu negócio.</p>
                 </div>
@@ -81,40 +84,55 @@
     <!-- About Section -->
     <section class="section about" id="about">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text slide-in-left">
-                    <h2>Sobre a Humans MK</h2>
-                    <p>Somos uma agência jovem e inovadora, fundada com a missão de humanizar o marketing digital. Acreditamos que por trás de cada clique, curtida e conversão existe uma pessoa real com sonhos e necessidades.</p>
-                    <p>Nossa equipe diversificada e inclusiva trabalha com foco total nos resultados dos nossos clientes. Combinamos criatividade, estratégia e tecnologia para transformar sua presença digital em um verdadeiro motor de crescimento.</p>
-                    <p>Valorizamos a diversidade, praticamos a inclusão e entregamos resultados que realmente importam para o seu negócio.</p>
-                </div>
-                
-                <div class="about-visual slide-in-right">
-                    <div class="about-icons">
-                        <div class="about-icon"></div>
-                        <div class="about-icon"></div>
-                        <div class="about-icon"></div>
-                    </div>
-                </div>
+            <div class="about-text slide-in-center">
+                <h2>Sobre a Humans MK</h2>
+                <p>Somos uma agência jovem e inovadora, fundada com a missão de humanizar o marketing digital. Acreditamos que por trás de cada clique, curtida e conversão existe uma pessoa real com sonhos e necessidades.</p>
+                <p>Nossa equipe diversificada e inclusiva trabalha com foco total nos resultados dos nossos clientes. Combinamos criatividade, estratégia e tecnologia para transformar sua presença digital em um verdadeiro motor de crescimento.</p>
+                <p>Valorizamos a diversidade, praticamos a inclusão e entregamos resultados que realmente importam para o seu negócio.</p>
             </div>
         </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section class="section portfolio" id="portfolio">
-        <div class="container">
-            <h2 class="section-title fade-in">Nosso trabalho fala por si</h2>
-            <div class="portfolio-content">
-                <div class="portfolio-grid">
-                    <div class="portfolio-item fade-in">Case de Sucesso #1</div>
-                    <div class="portfolio-item fade-in">Case de Sucesso #2</div>
-                    <div class="portfolio-item fade-in">Case de Sucesso #3</div>
-                </div>
-                <p class="fade-in">Acompanhe nossos cases completos e resultados em tempo real no Instagram</p>
-                <a href="https://instagram.com/humansmk" class="btn-secondary fade-in" target="_blank">Ver Portfólio Completo</a>
-            </div>
-        </div>
-    </section>
+    <div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="image/cases-de-sucesso-1.jpeg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="image/cases-de-sucesso-2.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="image/cases-de-sucesso-3.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
     <!-- Testimonials Section -->
     <section class="section testimonials" id="testimonials">
@@ -300,5 +318,6 @@
         </div>
     </div>
    <script src="script.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
