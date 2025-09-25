@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"response":"Que tal marcarmos uma consultoria gratuita para avaliar suas necessidades?"}
-=======
-{"response":"Nosso time est\u00e1 pronto para ajudar a transformar sua presen\u00e7a digital."}
->>>>>>> d4a0aa5482276cd5868c2899bba71f292597f576
+{"response":"Ficarei feliz em explicar mais sobre nossos servi\u00e7os de marketing digital."}

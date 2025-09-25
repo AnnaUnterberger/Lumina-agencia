@@ -90,7 +90,7 @@ Telefone: ${phone}
 
 Mensagem: ${message}
 
-Vim através do site da Humans MK e gostaria de saber mais sobre os serviços.`;
+Vim através do site da Lumina e gostaria de saber mais sobre os serviços.`;
             
             const whatsappURL = `https://wa.me/5511999999999?text=${encodeURIComponent(whatsappMessage)}`;
             window.open(whatsappURL, '_blank');
@@ -302,11 +302,11 @@ Vim através do site da Humans MK e gostaria de saber mais sobre os serviços.`;
                     } else if (data.fallback) {
                         this.addMessage(data.fallback, 'bot');
                     } else {
-                        this.addMessage('Desculpe, não consegui processar sua mensagem. Tente novamente ou entre em contato conosco pelo WhatsApp: (11) 99999-9999', 'bot');
+                        this.addMessage('Desculpe, não consegui processar sua mensagem. Tente novamente ou entre em contato conosco pelo WhatsApp: (51) 99999-9999', 'bot');
                     }
                 } catch (error) {
                     this.hideTyping();
-                    this.addMessage('Desculpe, estou com dificuldades técnicas no momento. Entre em contato conosco pelo WhatsApp: (11) 99999-9999', 'bot');
+                    this.addMessage('Desculpe, estou com dificuldades técnicas no momento. Entre em contato conosco pelo WhatsApp: (51) 99999-9999', 'bot');
                 }
             }
 

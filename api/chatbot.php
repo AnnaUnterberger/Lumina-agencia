@@ -41,7 +41,7 @@ if (!$apiKey) {
 $userMessage = trim($input['message']);
 
 // Prompt do sistema
-$systemPrompt = "Você é o assistente virtual da agência de marketing Humans MK. 
+$systemPrompt = "Você é o assistente virtual da agência de marketing Lumina. 
 
 PERSONALIDADE:
 - Seja gentil, amigável e prestativo
@@ -62,10 +62,10 @@ DIRETRIZES:
 
 CONTATO:
 - WhatsApp: (11) 99999-9999
-- Email: contato@humansmk.com.br
-- Instagram: @humansmk
+- Email: contato@lumina.com.br
+- Instagram: @lumina
 
-Responda sempre como se fosse o assistente oficial da Humans MK.";
+Responda sempre como se fosse o assistente oficial da Lumina.";
 
 // Dados para a API Gemini
 $data = [
@@ -88,16 +88,16 @@ $data = [
         'topK' => 32,
         'topP' => 0.9,
         'maxOutputTokens' => 200,
-        'stopSequences' => ["Human:", "Assistant:"]
+        'stopSequences' => ["Lumina:", "Assistant:"]
     ]
 ];
 
 // Simulação de resposta do chatbot sem depender de API externa
 $possibleResponses = [
     "Olá! Como posso ajudar você hoje?",
-    "A Humans MK oferece serviços de marketing digital, social media, branding e desenvolvimento web.",
+    "A Lumina oferece serviços de marketing digital, social media, branding e desenvolvimento web.",
     "Nosso time está pronto para ajudar a transformar sua presença digital.",
-    "Você pode entrar em contato conosco pelo WhatsApp (11) 99999-9999 para mais informações.",
+    "Você pode entrar em contato conosco pelo WhatsApp (51) 99999-9999 para mais informações.",
     "Ficarei feliz em explicar mais sobre nossos serviços de marketing digital.",
     "Que tal marcarmos uma consultoria gratuita para avaliar suas necessidades?",
 ];
@@ -123,7 +123,7 @@ file_put_contents(__DIR__ . "/log_gemini.txt", $response);
 if ($error) {
     echo json_encode([
         'error' => 'Erro de conexão: ' . $error,
-        'fallback' => 'Desculpe, estou com dificuldades técnicas no momento. Entre em contato conosco pelo WhatsApp: (11) 99999-9999'
+        'fallback' => 'Desculpe, estou com dificuldades técnicas no momento. Entre em contato conosco pelo WhatsApp: (51) 99999-9999'
     ]);
     exit;
 }
@@ -131,7 +131,7 @@ if ($error) {
 if ($httpCode !== 200) {
     echo json_encode([
         'error' => 'Erro na API: ' . $httpCode,
-        'fallback' => 'Desculpe, estou com dificuldades técnicas no momento. Entre em contato conosco pelo WhatsApp: (11) 99999-9999'
+        'fallback' => 'Desculpe, estou com dificuldades técnicas no momento. Entre em contato conosco pelo WhatsApp: (51) 99999-9999'
     ]);
     exit;
 }

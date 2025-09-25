@@ -11,6 +11,7 @@
             --light-gray: #999999;
             --bg-gray: #F5F5F5;
             --white: #ffffff;
+            --blue: #003cb3;
         }
 
         html {
@@ -63,7 +64,7 @@
         }
 
         /* Section title alignments */
-        .section-title,
+        .section-title, 
         .section-subtitle {
             text-align: center;
             max-width: 800px;
@@ -122,7 +123,7 @@
 
 .carousel-caption {
   color: #000000;
-  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+  text-shadow: 0px 0px 10px rgb(0, 0, 0);
 }    @media screen and (max-width: 768px) {
         .carousel-inner {
             height: 55vw;
@@ -130,6 +131,9 @@
             max-height: 300px;
         }
     }
+.visually-hidden{
+    color: black;
+}
 
         /* Header Styles */
         .header {
@@ -137,7 +141,7 @@
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgb(255, 255, 255);
             backdrop-filter: blur(10px);
             z-index: 1000;
             transition: all 0.3s ease;
@@ -164,6 +168,7 @@
             align-items: center;
             text-decoration: none;
             padding: 0.5rem 0;
+            font-weight: bold;
         }
 
         .logo-title-image {
@@ -422,7 +427,7 @@
         .btn-primary {
             display: inline-block;
             padding: 1rem 2rem;
-            background: var(--primary-black);
+            background: var(--blue);
             color: var(--white);
             text-decoration: none;
             border-radius: 5px;
@@ -452,7 +457,7 @@
             text-align: center;
             font-size: clamp(2rem, 4vw, 3rem);
             margin-bottom: 1rem;
-            color: var(--primary-black);
+            color: var(--dark-gray);
             font-weight: 700;
         }
 
@@ -511,6 +516,11 @@
 
         .service-card:hover {
             transform: translateY(-5px);
+        }
+
+        .Txt-Lumina{
+            text-align: justify;      /* Faz o texto alinhar nos dois lados */
+            line-height: 1.6;         /* Controla o espaçamento entre linhas */
         }
 
         @media screen and (max-width: 768px) {
@@ -590,10 +600,11 @@
         }
 
         .about-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: var(--primary-black);
             text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+            color: var(--dark-gray);
+            font-weight: 700;
         }
 
         .about-text p {
@@ -801,6 +812,7 @@
 
         .contact-content {
             display: grid;
+            color: var(--blue);
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: start;
@@ -893,9 +905,11 @@
             margin-bottom: 2rem;
         }
 
+
         .footer-section h4 {
             margin-bottom: 1rem;
             font-size: 1.2rem;
+            font-weight: bolder;
         }
 
         .footer-section p, .footer-section a {
@@ -922,7 +936,6 @@
         .social-link {
             width: 40px;
             height: 40px;
-            background: var(--dark-gray);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1027,6 +1040,7 @@
             }
 
             .contact-content {
+                color: var(--blue);
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
